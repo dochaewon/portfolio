@@ -30,6 +30,7 @@ app.use(methodOverride('_method'));
 // Routes
 app.use('/', require('./routes/home'));
 
+
 // Port setting
 var port = 3000;
 app.listen(port, function(){
