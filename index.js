@@ -32,7 +32,8 @@ app.use('/', require('./routes/home'));
 
 
 // Port setting
-var port = process.env.PORT || 3000;
-app.listen(port, function(){
-  console.log('server on! http://localhost:'+port);
+
+var server = app.listen(process.env.PORT || 3000, function () {
+  var port = server.address().port;
+  console.log("Express is working on port " + port);
 });
