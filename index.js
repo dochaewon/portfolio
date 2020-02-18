@@ -1,24 +1,24 @@
 // index.js
 
 var express = require('express');
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var app = express();
 
 // DB setting
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useFindAndModify', false);
-mongoose.set('useCreateIndex', true);
-mongoose.set('useUnifiedTopology', true);
-mongoose.connect(process.env.MONGO_DB);
-var db = mongoose.connection;
-db.once('open', function(){
-  console.log('DB connected');
-});
-db.on('error', function(err){
-  console.log('DB ERROR : ', err);
-});
+// mongoose.set('useNewUrlParser', true);
+// mongoose.set('useFindAndModify', false);
+// mongoose.set('useCreateIndex', true);
+// mongoose.set('useUnifiedTopology', true);
+// mongoose.connect(process.env.MONGO_DB);
+// var db = mongoose.connection;
+// db.once('open', function(){
+//   console.log('DB connected');
+// });
+// db.on('error', function(err){
+//   console.log('DB ERROR : ', err);
+// });
 
 // Other settings
 app.set('view engine', 'ejs');
